@@ -1,0 +1,19 @@
+version: '2.1'
+services:
+    app:
+        build: .
+        image: naval/app
+        container_name: app
+        depends_on:
+            banco:
+                condition: service_healthy
+        links:
+            - "banco:host-banco"
+    banco:
+        build: ./postgres
+        image: naval/banco
+        container_name: banco
+        ports:
+            - "5433:5432"
+        healthcheck:
+            test: "exit 0"
