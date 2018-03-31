@@ -24,7 +24,7 @@ public class Main {
         Produto dvd = new Produto("DVD", Categoria.Eletrônico);
         Produto compressor = new Produto("Compressor", Categoria.Ferramentas);
         Produto geladeira = new Produto("Geladeira Inox", Categoria.Eletrodoméstico);
-        Carga carga = new Carga("China", "Brasil");
+        Carga carga = new Carga("Cajazeiras", "João Pessoa");
         carga.addProduto(celular);
         carga.addProduto(dvd);
         carga.addProduto(compressor);
